@@ -4,12 +4,6 @@ layout: default
 <article class="project-detail">
     <h2 class="project-title">{{ page.title }}</h2>
     <p class="project-meta">{{ page.category }}</p>
-    
-    {% if page.image %}
-    <div class="project-hero">
-        <img src="{{ page.image | relative_url }}" alt="{{ page.title }}">
-    </div>
-    {% endif %}
 
     <div class="project-content">
         {{ content }}

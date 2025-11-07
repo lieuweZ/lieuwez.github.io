@@ -8,22 +8,24 @@
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
 <body>
-    <header class="site-header">
-        <h1 class="site-title"><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
-        <p class="site-description">{{ site.description }}</p>
-        <nav class="main-nav">
-            <a href="{{ '/' | relative_url }}">PROJECTS</a>
-            <a href="{{ '/about/' | relative_url }}">BIO</a>
-            <a href="{{ '/contact/' | relative_url }}">CONTACT</a>
-        </nav>
-    </header>
+    <div class="page-container">
+        <header class="site-header">
+            <h1 class="site-title"><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
+            <p class="site-description">{{ site.description }}</p>
+            <nav class="main-nav">
+                <a href="{{ '/' | relative_url }}">PROJECTS</a>
+                <a href="{{ '/about/' | relative_url }}">BIO</a>
+                <a href="{{ '/contact/' | relative_url }}">CONTACT</a>
+            </nav>
+        </header>
 
-    <main class="main-content">
-        {{ content }}
-    </main>
+        <main class="main-content">
+            {{ content }}
+        </main>
 
-    <footer class="site-footer">
-        <p>&copy; {{ 'now' | date: "%Y" }} {{ site.title }}. All rights reserved.</p>
-    </footer>
+        <footer class="site-footer">
+            <p>&copy; {{ 'now' | date: "%Y" }} {{ site.title }}. All rights reserved.</p>
+        </footer>
+    </div>
 </body>
 </html>
