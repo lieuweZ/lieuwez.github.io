@@ -2,7 +2,7 @@
 layout: project
 title: Drink Mixer Match-3
 category: Digital, Game Design
-# image: /assets/images/Game_tweede__semester.png
+image: /assets/images/Game_tweede__semester.png
 ---
 
 <img src="/assets/images/SwipeDrink.gif" alt="Drink Mixer gameplay demo" class="project-demo-gif">
