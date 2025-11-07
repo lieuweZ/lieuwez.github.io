@@ -194,9 +194,9 @@ body {
 }
 
 .project-content img {
-    width: 100%;
-    height: auto;
-    margin: 30px 0;
+    max-width: 500px !important;
+    margin: 2rem auto !important;
+    display: block !important;
     border-radius: 8px;
 }
 
