@@ -1,0 +1,310 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff;
+}
+
+/* Header Styles */
+.site-header {
+    text-align: center;
+    padding: 60px 20px 40px;
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+}
+
+.site-title {
+    font-size: 3.5rem;
+    font-weight: 900;
+    letter-spacing: -1px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    color: #1a1a1a;
+}
+
+.site-description {
+    font-size: 1.1rem;
+    color: #999;
+    font-style: italic;
+    max-width: 900px;
+    margin: 0 auto 30px;
+    line-height: 1.5;
+}
+
+/* Navigation */
+.main-nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #1a1a1a;
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+    color: #666;
+}
+
+/* Main Content */
+.main-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+/* Projects Grid */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.project-card {
+    position: relative;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.project-card a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.project-card img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    display: block;
+    border-radius: 8px 8px 0 0;
+}
+
+.project-card h3 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin: 20px 20px 10px;
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+    color: #1a1a1a;
+}
+
+.project-category {
+    font-size: 0.9rem;
+    color: #999;
+    font-style: italic;
+    margin: 0 20px 20px;
+}
+
+/* Project Detail Page */
+.project-detail {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.project-title {
+    font-size: 3rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    text-align: center;
+    letter-spacing: -1px;
+}
+
+.project-meta {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #999;
+    font-style: italic;
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+    border-bottom: 2px solid #1a1a1a;
+}
+
+.project-hero img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 40px;
+}
+
+.project-content {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.project-content h2 {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.project-content h3 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.project-content p {
+    margin-bottom: 20px;
+}
+
+.project-content img {
+    width: 100%;
+    height: auto;
+    margin: 30px 0;
+    border-radius: 8px;
+}
+
+.project-content ul,
+.project-content ol {
+    margin-left: 30px;
+    margin-bottom: 20px;
+}
+
+.project-content li {
+    margin-bottom: 10px;
+}
+
+/* Footer */
+.site-footer {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f8f8f8;
+    border-top: 1px solid #eee;
+    margin-top: 80px;
+}
+
+.site-footer p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Page Content Styles */
+.page-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.page-content h2 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    text-align: center;
+    letter-spacing: -1px;
+}
+
+.page-content h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.page-content p {
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+.page-content ul {
+    margin-left: 30px;
+    margin-bottom: 20px;
+}
+
+.page-content li {
+    margin-bottom: 10px;
+}
+
+/* Contact Page */
+.contact-info {
+    margin-top: 40px;
+}
+
+.contact-info p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+.contact-info a {
+    color: #1a1a1a;
+    text-decoration: none;
+    border-bottom: 2px solid #1a1a1a;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: #666;
+    border-color: #666;
+}
+
+/* Ludography Page */
+.ludography-list h3 {
+    margin-top: 40px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .site-title {
+        font-size: 2.5rem;
+    }
+    
+    .site-description {
+        font-size: 1rem;
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .project-title {
+        font-size: 2rem;
+    }
+    
+    .main-nav {
+        gap: 15px;
+    }
+    
+    .main-nav a {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .site-title {
+        font-size: 2rem;
+    }
+    
+    .site-header {
+        padding: 40px 20px 30px;
+    }
+    
+    .main-content {
+        padding: 40px 15px;
+    }
+}
