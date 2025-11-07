@@ -9,11 +9,10 @@
 </head>
 <body>
     <header class="site-header">
-        <h1 class="site-title">{{ site.title }}</h1>
+        <h1 class="site-title"><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
         <p class="site-description">{{ site.description }}</p>
         <nav class="main-nav">
             <a href="{{ '/' | relative_url }}">PROJECTS</a>
-            <a href="{{ '/ludography/' | relative_url }}">LUDOGRAPHY</a>
             <a href="{{ '/about/' | relative_url }}">BIO</a>
             <a href="{{ '/contact/' | relative_url }}">CONTACT</a>
         </nav>

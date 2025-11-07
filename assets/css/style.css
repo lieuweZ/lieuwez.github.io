@@ -29,6 +29,16 @@ body {
     color: #1a1a1a;
 }
 
+.site-title a {
+    text-decoration: none;
+    color: #1a1a1a;
+    transition: color 0.3s ease;
+}
+
+.site-title a:hover {
+    color: #666;
+}
+
 .site-description {
     font-size: 1.1rem;
     color: #999;
@@ -81,6 +91,7 @@ body {
     background: #fff;
     border-radius: 8px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 3px solid #1a1a1a;
 }
 
 .project-card:hover {
@@ -122,6 +133,15 @@ body {
 .project-detail {
     max-width: 900px;
     margin: 0 auto;
+}
+
+.project-demo-gif {
+    display: block;
+    margin: 2rem auto;
+    max-width: 90%;
+    border-radius: 1rem;
+    box-shadow: 0 4px 32px rgba(0,0,0,0.15);
+    border: 8px solid #1a1a1a;
 }
 
 .project-title {

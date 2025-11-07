@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: YOUR NAME HERE
+title: Games by Lieuwe
 email: lieuwe.groningen@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Award-winning game designer with a focus on systems design, innovative game mechanisms and making games that bring people together
