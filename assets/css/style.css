@@ -301,11 +301,9 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     background: #fff;
-}
-
-.cv-container > div {
-    display: inline-block;
-    vertical-align: top;
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    min-height: 100vh;
 }
 
 /* Left Sidebar - Dark Section */
@@ -313,9 +311,6 @@ body {
     background: #1a1a1a;
     color: #fff;
     padding: 60px 40px;
-    width: 400px;
-    float: left;
-    min-height: 100vh;
     box-sizing: border-box;
 }
 
@@ -405,9 +400,6 @@ body {
 .cv-main {
     background: #fff;
     padding: 60px 50px;
-    width: calc(100% - 400px);
-    float: left;
-    min-height: 100vh;
     box-sizing: border-box;
 }
 
@@ -489,13 +481,6 @@ body {
     margin-bottom: 8px;
     line-height: 1.7;
     color: #333;
-}
-
-/* Clearfix for floats */
-.cv-container::after {
-    content: "";
-    display: table;
-    clear: both;
 }
 
 /* Remove old CV grid styles */
