@@ -1,7 +1,7 @@
 ---
 layout: cv
 title: Bio
-permalink: about
+permalink: /about/
 ---
 
 # LIEUWE
