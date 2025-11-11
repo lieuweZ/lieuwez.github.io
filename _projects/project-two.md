@@ -1,19 +1,21 @@
 ---
 layout: project
-title: Project Two
-category: Digital, In Development
-image: /assets/images/project2.jpg
+title: Dreaded Depths
+category: Digital, Prototype
+image: /assets/images/DreadedDepths.png
 order: 2
 ---
 
 ## Overview
 
-This is your second project. Replace this with your actual project description.
+## Gameplay
 
-## Concept
+**Core Features:**
+- Boat driving
+- Shooting of spears
+- Fish boss phases
 
-Explain the concept and inspiration behind this project.
+Prototype of concept dreaded depths. The player is stuck on a water with a fish monster. The player has to the defeat the fish to be free and get the money.
 
-## Current Status
 
-Share where you are in the development process.
+![Dreaded Depths](/assets/images/DreadedDepths.png)

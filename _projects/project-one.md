@@ -1,25 +1,32 @@
 ---
 layout: project
-title: Project One
+title: HexFront
 category: Digital, Published
-image: /assets/images/project1.jpg
+image: /assets/images/HexFront.png
 order: 1
 ---
 
 ## Overview
 
-This is your first project. Replace this with your actual project description.
+This is a tactical strategy game played on a hexagonal grid. Place unique building pieces to expand your control, defend your territory, and launch attacks. Each piece has a different role—choose the right ones to gain the upper hand. Your ultimate goal: destroy the enemy’s central building before they destroy yours.
 
-## Key Features
+## Core Features
 
-- Feature 1
-- Feature 2
-- Feature 3
+- Territory conquest with buildings and unit
+- turn based
+- Resource Management
+- PVP
 
-## Development
+## My Contributions
 
-Describe the development process, technologies used, and any interesting challenges you overcame.
+Achievements
 
-## Results
+Unit spawns on the hex grid, and moves.
 
-Share the outcomes and impact of your project.
+![Unit](/assets/images/Unit.png)
+
+### Achievement system
+
+The feature makes it possible to get achievements. many games have achievements, usually to ensure that a player gets more motivation. When you achieve an achievement, a popup with a sound will appear at the bottom right of the screen.
+
+![Achievement](/assets/images/Achievement.png)
