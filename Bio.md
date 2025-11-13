@@ -10,15 +10,16 @@ permalink: /about/
 
 ## PERSOONLIJK PROFIEL
 
-Een gemotiveerde en creatieve game designer met ervaring in het ontwerpen en analyseren van game design. Sterk in doorzetten en oplossingsgericht werken.
-
-## VAARDIGHEDEN
+## HARD SKILLS
 
 - Game design
 - C# / Unity
+- Systems design
+
+## SOFT SKILLS
+
 - Oplossingsgericht
 - Zelfstandig werken
-- Systems design
 
 ## CONTACT 
 
