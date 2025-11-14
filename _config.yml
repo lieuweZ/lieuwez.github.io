@@ -32,6 +32,14 @@ github_username:  lieuweZ
 plugins:
   - jekyll-feed
 
+# Syntax highlighting
+markdown: kramdown
+kramdown:
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    block:
+      line_numbers: false
+
 # Collections
 collections:
   projects:

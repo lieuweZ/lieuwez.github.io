@@ -3,7 +3,7 @@ layout: project
 title: Dreaded Depths
 category: Digital, Prototype
 image: /assets/images/DreadedDepths.png
-order: 2
+order: 3
 ---
 
 ## Overview
