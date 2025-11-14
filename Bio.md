@@ -4,7 +4,7 @@ title: Bio
 permalink: /about/
 ---
 
-# LIEUWE
+# LIEUWE Seffinga
 
 **GAME DEVELOPER**
 
