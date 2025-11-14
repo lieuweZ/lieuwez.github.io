@@ -6,6 +6,8 @@ image: /assets/images/HexFront.png
 order: 1
 ---
 
+<img src="/assets/images/GameplayHexfront.gif" alt="HexFront gameplay demo" class="project-demo-gif">
+
 ## Overview
 
 This is a tactical strategy game played on a hexagonal grid. Place unique building pieces to expand your control, defend your territory, and launch attacks. Each piece has a different role—choose the right ones to gain the upper hand. Your ultimate goal: destroy the enemy’s central building before they destroy yours.

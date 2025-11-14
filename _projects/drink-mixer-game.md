@@ -25,5 +25,3 @@ Players match ingredients on a grid to create drink recipes for waiting customer
 
 - Grid-based logic for placing and matching ingredients
 - Falling animations and smooth movement between tiles
-- Custom sprite design for all ingredients and UI elements
-- Recipe combination system with dynamic customer orders
