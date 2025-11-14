@@ -27,4 +27,4 @@ Prototype of concept dreaded depths. The player is stuck on a water with a fish 
 
 ![GameplayPhases](/assets/images/GameplayPhases.png)
 
-[Game](https://fuzesuga.itch.io/dreaded-depths)
+[Game](https://fuzesuga.itch.io/dreaded-depths?secret=SYByp1YeJoHKmpU0pzWyMXxyfPs)
