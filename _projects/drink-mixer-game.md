@@ -1,7 +1,7 @@
 ---
 layout: project
 title: Drink Mixer Match-3
-category: Digital
+category: MonoGame, JavaScript
 image: /assets/images/Game_tweede__semester.png
 order: 2
 ---

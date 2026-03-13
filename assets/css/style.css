@@ -209,6 +209,13 @@ body {
     border-radius: 8px;
 }
 
+/* Allow selected gameplay GIFs to render larger than the default 500px cap */
+.project-content img.project-demo-gif-wide {
+    width: min(880px, 95vw) !important;
+    max-width: min(880px, 95vw) !important;
+    height: auto !important;
+}
+
 .project-content ul,
 .project-content ol {
     margin-left: 30px;

@@ -1,9 +1,9 @@
 ---
 layout: project
 title: HexFront
-category: Digital
+category: MonoGame, JavaScript
 image: /assets/images/HexFront.png
-order: 0
+order: 1
 ---
 
 <img src="/assets/images/GameplayHexfront.gif" alt="HexFront gameplay demo" class="project-demo-gif">

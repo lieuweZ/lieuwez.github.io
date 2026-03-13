@@ -1,9 +1,10 @@
 ---
 layout: project
 title: Dreaded Depths
-category: Digital, Prototype
+category: Unity, C#
 image: /assets/images/DreadedDepths.png
 order: 3
+published: false
 ---
 
 ## Overview
