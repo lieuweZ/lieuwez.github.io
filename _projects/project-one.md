@@ -10,41 +10,27 @@ order: 1
 
 ## Overview
 
-This is a tactical strategy game played on a hexagonal grid. Place unique building pieces to expand your control, defend your territory, and launch attacks. Each piece has a different role—choose the right ones to gain the upper hand. Your ultimate goal: destroy the enemy’s central building before they destroy yours.
+HexFront is a tactical turn-based strategy game played on a hexagonal grid. You place building pieces to expand your territory, defend your base, and attack the opponent. Every piece has its own unique role. The main goal is to destroy the enemy's central building before yours goes down.
 
 ## Core Features
 
-- Territory conquest with buildings and unit
-- turn based
-- Resource Management
-- PVP
+- Territory conquest with buildings and units
+- Turn-based gameplay
+- Resource management
+- PvP multiplayer
 
-## My Contributions
+My contributions focused on:
+- Unit spawning and grid movement logic
+- Real-time achievement system
+- Database integration and Socket.IO networking
 
+## Achievement System
 
-**Unit spawns on the hex grid, and moves.**
-
-![Unit](/assets/images/Unit.png)
-
-**Achievement system**
-
-The feature makes it possible to get achievements. many games have achievements, usually to ensure that a player gets more motivation. When you achieve an achievement, a popup with a sound will appear at the bottom right of the screen. 
-
-The achievements are based on amount of units placed. The player is incentivized to try other strategies.
+The feature I am most proud of is the achievement system. To give players extra motivation, I built a system that encourages them to try out different strategies, like placing a specific number of units. Whenever an achievement is unlocked, a popup notification with a sound effect dynamically appears on the screen.
 
 ![Achievement](/assets/images/Achievement.png)
 
-**Code**
-
-• **Real-time achievement tracking** - Monitors player actions during gameplay and unlocks achievements when milestones are reached (e.g., placing 10 units, building 5 resource collectors)
-
-• **Database integration** - Loads achievement definitions from database, tracks player progress with SQL queries, prevents duplicate unlocks using ON DUPLICATE KEY UPDATE
-
-• **Socket.IO notification**s - Instantly broadcasts achievement unlocks to player.
-
-• **Event-driven architecture** - Integrates with game's piece placement system, automatically checks achievements whenever players perform actions
-
-```csharp
+```javascript
     async notifyAchievementUnlocked(gameId, playerName, achievement) {
         // Find the room this game belongs to
         const gameResult = await this._databaseConnector.executePreparedQuery(
@@ -70,3 +56,10 @@ The achievements are based on amount of units placed. The player is incentivized
         });
     }
 ```
+
+What this code does:
+- `executePreparedQuery()` looks up the specific multiplayer room ID that the game is running in.
+- The `if` check acts as a safeguard so we don't try to send notifications to non-existent rooms.
+- `this._io.to(roomId).emit()` uses Socket.IO to instantly broadcast a live popup to the exact room the player is in.
+
+It works smoothly in the background without interrupting gameplay. By hooking the achievement checks directly into the piece placement logic, we track player actions, use SQL to prevent duplicate unlocks, and deliver real-time feedback that makes the game feel more rewarding.
