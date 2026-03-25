@@ -2,7 +2,7 @@
 layout: project
 title: Silent Prey
 category: Unity, C#
-image: /assets/images/Silent-Prey.png
+image: /assets/images/Silent-Prey-MainMenu.png
 order: 0
 ---
 [**Play Silent Prey on itch.io!**](https://lucasvd-hva.itch.io/silent-prey)
