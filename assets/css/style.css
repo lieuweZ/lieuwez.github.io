@@ -437,9 +437,9 @@ body {
     border-color: #fff;
 }
 
-/* Right Main Content - White Section */
+/* Right Main Content - Off-White Section */
 .cv-main {
-    background: #fff;
+    background: #f8f8f8;
     padding: 60px 50px;
     box-sizing: border-box;
 }
