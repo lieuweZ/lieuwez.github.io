@@ -6,6 +6,8 @@ image: /assets/images/HexFront.png
 order: 1
 ---
 
+[**Download HexFront on itch.io!**](https://nickdisp.itch.io/hexfront)
+
 <img src="/assets/images/GameplayHexfront.gif" alt="HexFront gameplay demo" class="project-demo-gif">
 
 ## Overview
@@ -19,16 +21,17 @@ HexFront is a tactical turn-based strategy game played on a hexagonal grid. You 
 - Resource management
 - PvP multiplayer
 
-My contributions focused on:
+**My contributions focused on:**
 - Unit spawning and grid movement logic
 - Real-time achievement system
 - Database integration and Socket.IO networking
 
 ## Achievement System
 
+![Achievement](/assets/images/Achievement.png)
+
 The feature I am most proud of is the achievement system. To give players extra motivation, I built a system that encourages them to try out different strategies, like placing a specific number of units. Whenever an achievement is unlocked, a popup notification with a sound effect dynamically appears on the screen.
 
-![Achievement](/assets/images/Achievement.png)
 
 ```javascript
     async notifyAchievementUnlocked(gameId, playerName, achievement) {

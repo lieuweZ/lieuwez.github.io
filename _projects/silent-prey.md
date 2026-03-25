@@ -5,9 +5,10 @@ category: Unity, C#
 image: /assets/images/Silent-Prey.png
 order: 0
 ---
+[**Play Silent Prey on itch.io!**](https://lucasvd-hva.itch.io/silent-prey)
 
-<iframe height="167" frameborder="0" src="https://itch.io/embed/4016016" width="552"><a href="https://lucasvd-hva.itch.io/silent-prey">Silent Prey by lucasvd-hva</a></iframe>
-
+<img src="/assets/images/Silent-Prey-Gameplay.png" alt="Silent Prey gameplay demo" class="project-demo-gif project-demo-gif-wide">
+    
 ## Overview
 
 Silent Prey is a 3D stealth-horror game made in Unity. The player explores dark corridors, avoids a boss that reacts to sight and sound, and looks for safe moments to strike from behind. Sound-based distraction is a core loop: by throwing cans, the player can redirect the boss, open a route, and create a short attack window.
@@ -19,7 +20,7 @@ Silent Prey is a 3D stealth-horror game made in Unity. The player explores dark 
 - Enemy that builds traps to catch the player
 - Sound based distraction mechanics like throwing cans
 
-My contributions focused on:
+**My contributions focused on:**
 - Map atmosphere and visual setup
 - Can throw gameplay mechanic
 - UI feedback for player actions

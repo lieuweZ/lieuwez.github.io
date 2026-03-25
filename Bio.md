@@ -8,7 +8,7 @@ permalink: /about/
 
 **GAME DEVELOPER**
 
-## PERSOONLIJK PROFIEL
+<h2 style="border-bottom: none;">PERSOONLIJK PROFIEL</h2>
 
 ## HARD SKILLS
 
@@ -25,7 +25,7 @@ permalink: /about/
 
 ## CONTACT 
 
-- Email: [EMAIL_ADDRESS]
+- Email: lieuwe.seffinga@hva.nl  
 - LinkedIn: [linkedin.com/in/lieuwe-seffinga](https://www.linkedin.com/in/lieuwe-seffinga/)
 - Portfolio: lieuwez.github.io
 
@@ -40,7 +40,7 @@ permalink: /about/
 - Unity C# programmeren
 - Toepassen van Object-Oriented Programming (OOP)
 - Werken met Scrum en versiebeheer in gitlab
-- Game design en level design
+- Game en level design
 
 
 
