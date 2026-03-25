@@ -21,10 +21,9 @@ Silent Prey is a 3D stealth-horror game made in Unity. The player explores dark 
 - Sound based distraction mechanics like throwing cans
 
 **My contributions focused on:**
-- Map atmosphere and visual setup
 - Can throw gameplay mechanic
 - UI feedback for player actions
-
+- Atmosphere and visuals
 ## Throw Mechanic
 
 The part I am most proud of is the can throw mechanic. Holding right mouse button charges power over time, and releasing launches the can forward from the player camera direction. This gives intentional control: a short hold for close distractions, and a long hold for deeper baits.
