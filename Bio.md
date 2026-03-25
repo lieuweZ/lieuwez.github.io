@@ -12,18 +12,20 @@ permalink: /about/
 
 ## HARD SKILLS
 
-- Game design
-- C# / Unity
-- Systems design
+- Unity
+- C#
+- Level Design
+- UX/UI Design
 
 ## SOFT SKILLS
 
 - Oplossingsgericht
 - Zelfstandig werken
 
+
 ## CONTACT 
 
-- Email: lieuwe.seffinga@hva.nl
+- Email: [EMAIL_ADDRESS]
 - LinkedIn: [linkedin.com/in/lieuwe-seffinga](https://www.linkedin.com/in/lieuwe-seffinga/)
 - Portfolio: lieuwez.github.io
 
@@ -33,15 +35,18 @@ permalink: /about/
 
 ### Hogeschool van Amsterdam (HvA)
 
-<strong>Game Design student | vanaf 2023</strong>
+<strong>HBO-ICT: Game Development | 2023 - heden</strong>
 
-- Ervaring met Unity C# programmeren
-- Focus op systems design en game mechanics
-- Portfolio development en project management
+- Unity C# programmeren
+- Toepassen van Object-Oriented Programming (OOP)
+- Werken met Scrum en versiebeheer in gitlab
+- Game design en level design
 
-### Marnix College
 
-<strong>Middelbare school diploma </strong>
+
+### Marnix College Ede
+
+<strong>HAVO diploma </strong>
 
 ## WERKERVARING
 
