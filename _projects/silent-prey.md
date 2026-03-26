@@ -15,10 +15,11 @@ Silent Prey is a 3D stealth-horror game made in Unity. The player explores dark 
 
 ## Core Features
 
-- 3D stealth, horror and exploration game
-- Enemy AI boss that reacts to sound
+- Enemy AI boss that tracks you by reacting to sound
 - Enemy that builds traps to catch the player
-- Sound based distraction mechanics like throwing cans
+- Sound-based distraction mechanics, like throwing cans to create safe paths
+- Atmospheric horror environment designed for stealth and exploration
+
 
 **My contributions focused on:**
 - Can throw gameplay mechanic
