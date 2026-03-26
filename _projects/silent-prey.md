@@ -27,38 +27,58 @@ Silent Prey is a 3D stealth-horror game made in Unity. The player explores dark 
 - Atmosphere and visuals
 ## Throw Mechanic
 
-The part I am most proud of is the can throw mechanic. Holding right mouse button charges power over time, and releasing launches the can forward from the player camera direction. This gives intentional control: a short hold for close distractions, and a long hold for deeper baits.
+The part I am most proud of is the can throw mechanic. Holding right mouse button charges power over time between 0 and 1 seconds. Then releasing launches the can forward from the player camera direction. 
 
 
 <img src="/assets/images/Can Throwing.gif" alt="Can throwing mechanic demo" class="project-demo-gif project-demo-gif-wide">
 
 ```csharp
 // CanThrower.cs
-private void UpdateCharge()
+public class CanLandingDetector : MonoBehaviour
 {
-    float chargeTime = Time.time - _chargeStartTime;
-    _currentCharge = Mathf.Clamp01(chargeTime / _maxChargeTime);
+    [SerializeField] private float _canDetectionRange = 20f;
+    [SerializeField] private LayerMask _detectionMask;
+    [SerializeField] private Vector3 _eyeOffset = new Vector3(0f, 1.7f, 0f);
+
+    // Returns true only if the can is close enough AND not blocked by geometry
+    public bool IsCanInSight(Vector3 canPosition, Transform canTransform)
+    {
+        if (canTransform == null) return false;
+
+        float distance = Vector3.Distance(transform.position, canPosition);
+        if (distance > _canDetectionRange) return false;
+
+        Vector3 eyePos = transform.position + _eyeOffset;
+        Vector3 dir    = (canPosition - eyePos).normalized;
+
+        // Raycast from the boss' eyes to the can
+        if (Physics.Raycast(eyePos, dir, out RaycastHit hit, distance, _detectionMask))
+        {
+            // If we hit something else first, the can is hidden behind it
+            if (hit.transform != canTransform)
+                return false;
+        }
+
+        return true;
+    }
 }
 
-private Vector3 CalculateThrowVelocity()
+private void CheckStateTransitions()
 {
-    float throwForce = Mathf.Lerp(_minThrowForce, _maxThrowForce, _currentCharge);
-    Vector3 direction = _playerCamera.transform.forward;
-    return direction * throwForce;
-}
+    // Check for player in sight (higher priority)
+    if (_playerInSightDetector.IsPlayerInSight())
+    {
+        p_stateMachine.GoToState<ChaseState>();
+        return;
+    }
 
-private void ThrowCan()
-{
-    Vector3 velocity = CalculateThrowVelocity();
-    CanProjectile projectile = Instantiate(_canPrefab, _throwPoint.position, Quaternion.identity)
-        .GetComponent<CanProjectile>();
-    projectile.Launch(velocity);
+    // Check if reached the can
+    if (Vector3.Distance(transform.position, _canLandingPos) <= 3f)
+    {
+        p_stateMachine.GoToState<PatrolState>();
+        return;
+    }
 }
 ```
 
-What this code does:
-- `UpdateCharge()` converts hold-time into a normalized value between `0` and `1`.
-- `CalculateThrowVelocity()` maps that value to a force range and creates a velocity vector.
-- `ThrowCan()` spawns the projectile at the throw point and applies launch velocity.
-
-It is predictable for players, because force scales linearly with charge time. It keeps responsibilities separated charge, velocity calculation and spawn/launch, which makes it easier to debug and extend. This mechanic directly supports the stealth loop: the player controls where sound happens, pulls the boss away from key paths, and creates a safe window to move or attack.
+This snippet implements a distance‑ and raycast‑based visibility check for cans and connects it to a state machine with a strict priority order: player > can. The detector exposes three tuning parameters: _canDetectionRange (a world‑space radius that defines how far the boss can react to cans), _detectionMask (a layer mask that decides which colliders count as blocking level geometry for the raycast), and _eyeOffset (a local offset that moves the ray origin from the boss’s pivot to an approximate eye position). This is to check if the enemy can really see the can and is not block by a wall or the can is around a corner. The detection range is that is avoids unnecessary raycasts for irrelevant targets. If the player is in sight it goes to the player or if the can is less then 3f it goes back to patrol state.
