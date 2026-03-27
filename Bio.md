@@ -14,9 +14,10 @@ permalink: /about/
 
 - Unity
 - C#
+- JavaScript
 - Level Design
 - UX/UI Design
-- Wiskunde
+- Algebra
 
 ## SOFT SKILLS
 
