@@ -16,7 +16,6 @@ permalink: /about/
 - C#
 - JavaScript
 - Algebra
-- Level Design
 - UX/UI Design
 
 ## SOFT SKILLS
