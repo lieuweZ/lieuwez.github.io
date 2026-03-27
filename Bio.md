@@ -16,6 +16,7 @@ permalink: /about/
 - C#
 - Level Design
 - UX/UI Design
+- Wiskunde
 
 ## SOFT SKILLS
 
