@@ -30,7 +30,7 @@ Players match ingredients on a grid to create drink recipes for waiting customer
 
 ## Tile Gravity System
 
-One of the most important systems I implemented is the grid gravity and fall animation. In a match-3 game, when pieces are cleared, the board needs to update fluidly as new pieces fall into place.
+One of the most important systems in a match-3 game is the grid gravity and fall animation. When pieces are cleared, the board needs to update fluidly as new pieces fall into place.
 
 **What this code does:**
 - `dropTile()` is a recursive function that handles the game's gravity and cascading effect when ingredients are cleared.
