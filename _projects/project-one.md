@@ -32,6 +32,13 @@ HexFront is a tactical turn-based strategy game played on a hexagonal grid. You 
 
 The feature I am most proud of is the achievement system. To give players extra motivation, I built a system that encourages them to try out different strategies, like placing a specific number of units. Whenever an achievement is unlocked, a popup notification with a sound effect dynamically appears on the screen.
 
+**What this code does:**
+- `executePreparedQuery()` looks up the specific multiplayer room ID that the game is running in.
+- The `if` check acts as a safeguard so we don't try to send notifications to non-existent rooms.
+- `this._io.to(roomId).emit()` uses Socket.IO to instantly broadcast a live popup to the exact room the player is in.
+
+It works smoothly in the background without interrupting gameplay. By hooking the achievement checks directly into the piece placement logic, we track player actions, use SQL to prevent duplicate unlocks, and deliver real-time feedback that makes the game feel more rewarding.
+
 
 ```javascript
     async notifyAchievementUnlocked(gameId, playerName, achievement) {
@@ -60,9 +67,3 @@ The feature I am most proud of is the achievement system. To give players extra 
     }
 ```
 
-What this code does:
-- `executePreparedQuery()` looks up the specific multiplayer room ID that the game is running in.
-- The `if` check acts as a safeguard so we don't try to send notifications to non-existent rooms.
-- `this._io.to(roomId).emit()` uses Socket.IO to instantly broadcast a live popup to the exact room the player is in.
-
-It works smoothly in the background without interrupting gameplay. By hooking the achievement checks directly into the piece placement logic, we track player actions, use SQL to prevent duplicate unlocks, and deliver real-time feedback that makes the game feel more rewarding.

@@ -27,10 +27,21 @@ Silent Prey is a 3D stealth-horror game made in Unity. The player explores dark 
 - Atmosphere and visuals
 ## Throw Mechanic
 
-The part I am most proud of is the can throw mechanic. Holding right mouse button charges power over time between 0 and 1 seconds. Then releasing launches the can forward from the player camera direction. 
+The part I am most proud of is the can throw mechanic. Holding right mouse button charges power over time between 0 and 1 seconds. Then releasing launches the can forward from the player camera direction. It shows a trajectory line where the can is going to land so the player knows has more control over it.
 
 
 <img src="/assets/images/Can Throwing.gif" alt="Can throwing mechanic demo" class="project-demo-gif project-demo-gif-wide">
+
+**Code:**
+
+This logic handles distance- and raycast-based visibility for distractions, ensuring the boss only reacts if the sound is within range and not blocked by walls. The state machine follows a strict priority: the player always takes precedence over sound distractions.
+
+**Key Parameters:**
+- **`_canDetectionRange`**: Maximum radius for detecting sound distractions.
+- **`_detectionMask`**: Defines which layers (e.g., Environment) block the boss’s line of sight.
+- **`_eyeOffset`**: Offsets the raycast origin from the pivot to the boss’s eye level.
+
+If the player is detected, the boss immediately enters `ChaseState`. Otherwise, reaching the distraction point within 3 units triggers a return to `PatrolState`.
 
 ```csharp
 // CanThrower.cs
@@ -43,8 +54,6 @@ public class CanLandingDetector : MonoBehaviour
     // Returns true only if the can is close enough AND not blocked by geometry
     public bool IsCanInSight(Vector3 canPosition, Transform canTransform)
     {
-        if (canTransform == null) return false;
-
         float distance = Vector3.Distance(transform.position, canPosition);
         if (distance > _canDetectionRange) return false;
 
@@ -55,14 +64,11 @@ public class CanLandingDetector : MonoBehaviour
         if (Physics.Raycast(eyePos, dir, out RaycastHit hit, distance, _detectionMask))
         {
             // If we hit something else first, the can is hidden behind it
-            if (hit.transform != canTransform)
-                return false;
+            return false;
         }
-
         return true;
     }
 }
-
 private void CheckStateTransitions()
 {
     // Check for player in sight (higher priority)
@@ -71,7 +77,6 @@ private void CheckStateTransitions()
         p_stateMachine.GoToState<ChaseState>();
         return;
     }
-
     // Check if reached the can
     if (Vector3.Distance(transform.position, _canLandingPos) <= 3f)
     {
@@ -80,5 +85,3 @@ private void CheckStateTransitions()
     }
 }
 ```
-
-This snippet implements a distance‑ and raycast‑based visibility check for cans and connects it to a state machine with a strict priority order: player > can. The detector exposes three tuning parameters: _canDetectionRange (a world‑space radius that defines how far the boss can react to cans), _detectionMask (a layer mask that decides which colliders count as blocking level geometry for the raycast), and _eyeOffset (a local offset that moves the ray origin from the boss’s pivot to an approximate eye position). This is to check if the enemy can really see the can and is not block by a wall or the can is around a corner. The detection range is that is avoids unnecessary raycasts for irrelevant targets. If the player is in sight it goes to the player or if the can is less then 3f it goes back to patrol state.
