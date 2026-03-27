@@ -15,14 +15,15 @@ permalink: /about/
 - Unity
 - C#
 - JavaScript
+- Algebra
 - Level Design
 - UX/UI Design
-- Algebra
 
 ## SOFT SKILLS
 
 - Oplossingsgericht
 - Zelfstandig werken
+- Aanpassingsvermogen
 
 
 ## CONTACT 
@@ -39,10 +40,10 @@ permalink: /about/
 
 <strong>HBO-ICT: Game Development | 2023 - heden</strong>
 
-- Unity C# programmeren
+- C# Unity & Javascript Monogame programmeren
 - Toepassen van Object-Oriented Programming (OOP)
 - Werken met Scrum en versiebeheer in gitlab
-- Game en level design
+- Game design
 
 
 
