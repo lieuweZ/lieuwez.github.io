@@ -8,7 +8,10 @@ permalink: /about/
 
 **GAME DEVELOPER**
 
-<h2 style="border-bottom: none;">PERSOONLIJK PROFIEL</h2>
+## PERSOONLIJK PROFIEL
+
+Game developer student met een passie voor het
+creëren van leerzame en innovatieve gamingervaringen.
 
 ## HARD SKILLS
 
