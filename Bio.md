@@ -11,7 +11,7 @@ permalink: /about/
 ## PERSOONLIJK PROFIEL
 
 Game developer student met een passie voor het
-creëren van leerzame en innovatieve gamingervaringen.
+creëren van leerzame en innovatieve games.
 
 ## HARD SKILLS
 
