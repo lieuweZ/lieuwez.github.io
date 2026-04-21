@@ -5,7 +5,7 @@ category: Unity, C#
 image: /assets/images/Silent-Prey-MainMenu.png
 order: 0
 ---
-[**Play Silent Prey on itch.io!**](https://lucasvd-hva.itch.io/silent-prey)
+[**Play Silent Prey on itch.io!**](https://fuzesuga.itch.io/silent-prey?secret=fZvXqvz0zA79jLcxZ5ORMbcyQY)
 
 <img src="/assets/images/Silent-Prey-Gameplay.png" alt="Silent Prey gameplay demo" class="project-demo-gif project-demo-gif-wide">
     

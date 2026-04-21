@@ -6,7 +6,7 @@ image: /assets/images/HexFront.png
 order: 1
 ---
 
-[**Download HexFront on itch.io!**](https://nickdisp.itch.io/hexfront)
+[**Download HexFront on itch.io!**](https://nickdisp.itch.io/hexfront?secret=migH0h72DMa66YptyipiH7geRg)
 
 <img src="/assets/images/GameplayHexfront.gif" alt="HexFront gameplay demo" class="project-demo-gif">
 
