@@ -69,19 +69,20 @@ public class CanLandingDetector : MonoBehaviour
         return true;
     }
 }
-private void CheckStateTransitions()
-{
-    // Check for player in sight (higher priority)
-    if (_playerInSightDetector.IsPlayerInSight())
+    float distanceToCan = Vector3.Distance(transform.position, _canLandingPos);
+
+    // Only confirm the can when the boss is close enough
+    if (distanceToCan <= 3f)
     {
-        p_stateMachine.GoToState<ChaseState>();
-        return;
-    }
-    // Check if reached the can
-    if (Vector3.Distance(transform.position, _canLandingPos) <= 3f)
-    {
-        p_stateMachine.GoToState<PatrolState>();
-        return;
+        bool canSeeCan = _canLandingDetector.IsCanInSight(_targetCan.LandingPosition, _targetCan.transform);
+
+        if (canSeeCan)
+        {
+            _targetCan.MarkAsInvestigated();
+            _canLandingDetector.ClearDetection();
+            p_stateMachine.GoToState<PatrolState>();
+            return;
+        }
     }
 }
 ```
