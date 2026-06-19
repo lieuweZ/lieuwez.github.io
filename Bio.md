@@ -10,7 +10,7 @@ permalink: /about/
 
 ## PERSOONLIJK PROFIEL
 
-Game developer student met een passie voor het
+Ik ben een 23 jarige game developer student met een passie voor het
 creëren van leerzame en innovatieve games.
 
 ## HARD SKILLS

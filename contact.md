@@ -12,5 +12,6 @@ permalink: /contact/
     <div class="contact-info">
         <p><strong>Email:</strong> {{ site.email }}</p>
         <p><strong>GitHub:</strong> <a href="https://github.com/{{ site.github_username }}">@{{ site.github_username }}</a></p>
+        <p><strong>Phone:</strong> +31 0638480408</p>
     </div>
 </div>

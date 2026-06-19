@@ -3,7 +3,7 @@ layout: project
 title: Silent Prey
 category: Unity, C#
 image: /assets/images/Silent-Prey-MainMenu.png
-order: 0
+order: 1
 ---
 [**Play Silent Prey on itch.io!**](https://fuzesuga.itch.io/silent-prey?secret=fZvXqvz0zA79jLcxZ5ORMbcyQY)
 
