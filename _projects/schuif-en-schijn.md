@@ -3,9 +3,15 @@ layout: project
 title: NEMO schuif & schijn
 category: Unity, C#
 image: /assets/images/schuif-en-schijn.png
+image_contain: true
 order: 0
 ---
 [**Speel Schuif en Schijn op itch.io!**](https://swzwij.itch.io/schuif-en-schijn)
+
+[📄 Lees het volledige procesverslag (PDF)](/assets/Proces-Schuif-en-Schijn.pdf)
+
+
+<img src="/assets/images/NEMO%20Gameplay.gif" alt="NEMO gameplay demo" class="project-demo-gif project-demo-gif-wide">
 
 <img src="/assets/images/schuif-en-schijn-gameplay.png" alt="Schuif en Schijn gameplay demo" class="project-demo-gif project-demo-gif-wide">
 
@@ -18,7 +24,9 @@ Het project is gemaakt door vier game development studenten van de Hogeschool va
 ## Core Features
 
 - **Dynamisch Lasersysteem**: Laserstralen die in real-time reflecteren op spiegels en door objecten worden geblokkeerd.
-- **CMY Kleurfilters**: Kleurfilters die subtractieve kleurmenging (Cyan, Magenta, Yellow) toepassen op passerend laserlicht. Wit licht bevat alle kleuren — een filter absorbeert een deel van het spectrum en laat de rest door. Een magentafilter haalt groen weg, een geelfilter haalt blauw weg; zet je die twee achter elkaar, dan blijft rood over. Al zouden we primaire RGB-filters gebruiken, dan verdwijnt deze puzzelmogelijkheid: een RGB-filter laat slechts één kleur door en blokkeert de andere twee direct. Het stapelen van twee verschillende RGB-filters blokkeert daardoor gelijk het volledige spectrum. Het CMY-model biedt precies de structuur die nodig is — elke combinatie van twee filters levert nog een bruikbare kleur op, waardoor zinvolle puzzels mogelijk zijn.
+- **CMY Kleurfilters**: Kleurfilters die subtractieve kleurmenging (Cyan, Magenta, Yellow) toepassen op passerend laserlicht. Wit licht bevat alle kleuren — een filter absorbeert een deel van het spectrum en laat de rest door. Een magentafilter haalt groen weg, een geelfilter haalt blauw weg; zet je die twee achter elkaar, dan blijft rood over. 
+
+Al zouden we primaire RGB-filters gebruiken, dan verdwijnt deze puzzelmogelijkheid: een RGB-filter laat slechts één kleur door en blokkeert de andere twee direct. Het stapelen van twee verschillende RGB-filters blokkeert daardoor gelijk het volledige spectrum. Het CMY-model biedt precies de structuur die nodig is — elke combinatie van twee filters levert nog een bruikbare kleur op, waardoor zinvolle puzzels mogelijk zijn.Dit staat tegenover additieve kleurmenging (RGB), waarbij kleuren juist worden opgeteld: rood + groen = geel, alle drie samen = wit.
 - **Oplaadbare Targets**: Einddoelen die alleen opladen wanneer ze door de juiste kleur laserlicht worden geraakt, en langzaam ontladen bij gebrek aan licht.
 - **Level Management**: Een gecentraliseerd systeem dat de voortgang van de speler beheert en dynamisch nieuwe levels inlaadt. Spelers moeten in totaal 2 levels van een moeilijkheidsniveau halen voordat de moeilijkheidsgraad omhoog gaat.
 
@@ -26,14 +34,15 @@ Het project is gemaakt door vier game development studenten van de Hogeschool va
 - Ontwerp en implementatie van het oplaadsysteem voor de **einddoelen** (`LevelTarget.cs` en `LevelTargetColor.cs`).
 - Realisatie van de **subtractieve kleurfilters** (`LaserColorFilter.cs`) om laserstralen van kleur te veranderen op basis van RGB/CMY-logica.
 - Mede-ontwikkeling van de **Level Manager** (`LevelManager.cs`) voor het registreren van doelen en het controleren van de win-condities.
+- Analyse maken hoe kinderen leren en hoe dit het beste kan worden toegepast in game design. Door levels en progressie te bestuderen zorgt het ervoor dat de opbouw geschikt is voor een brede doelgroep met verschillende niveaus van begrip. Dat zorgt ervoor dat iedereen op hun eigen manier iets van het spel leert.
 
 ---
 
 ## Level Progressie
 
-De levelopbouw volgt de structuur van **Kishōtenketsu** (起承転結): een Oost-Aziatisch vertelvorm met vier fases die ook in level design wordt toegepast. Introductie (*Ki*) — spiegels worden geïntroduceerd zonder afleiding. Ontwikkeling (*Shō*) — filters worden apart uitgediept. Wending (*Ten*) — de twee mechanics worden gecombineerd, wat een nieuw probleem creëert zonder dat er een nieuwe regel nodig is. Oplossing (*Ketsu*) — de schuifpuzzels brengen alles samen in toenemende complexiteit.
+De levelopbouw volgt de structuur van **Kishōtenketsu** : een Oost-Aziatisch vertelvorm met vier fases die ook in level design wordt toegepast. Introductie (*Ki*) spiegels worden geïntroduceerd zonder afleiding. Ontwikkeling (*Shō*) filters worden apart uitgediept. Wending (*Ten*) de twee mechanics worden gecombineerd, wat een nieuw probleem creëert zonder dat er een nieuwe regel nodig is. Oplossing (*Ketsu*) de schuifpuzzels brengen alles samen in toenemende complexiteit.
 
-| Niveau | Concept |
+| Niveau 
 |--------|---------|
 | 1 | Alleen spiegels |
 | 2 | Alleen filters |
@@ -47,6 +56,8 @@ De keuze om filters **los** van spiegels te introduceren was een leerresultaat v
 ---
 
 ## Code Showcase
+
+<img src="/assets/images/schuif-en-schijn-demo.gif" alt="Schuif en Schijn kleurfilter demo" class="project-demo-gif">
 
 ### 1. Subtractieve kleurfilters
 
@@ -76,7 +87,7 @@ public static bool IsAbsorbed(Color color)
     => color.r < 0.01f && color.g < 0.01f && color.b < 0.01f;
 ```
 
-### 2. Oplaadbaar target met kleurcheck en decay
+### 2. Oplaadbaar target met kleurcheck
 
 `ReceiveLight` wordt elke frame aangeroepen door de laser. Als de kleur niet klopt, keert de methode direct terug. Zodra de timer `requiredSeconds` bereikt, meldt het target zichzelf bij de LevelManager. De `Update`-loop laat de timer langzaam leeglopen als er geen licht op valt, en werkt de visuele progress-ring bij.
 
@@ -153,5 +164,4 @@ public void OnTargetActivated(LevelTarget activatedTarget)
 
 ---
 
-[📄 Lees het volledige procesverslag (PDF)](/assets/Proces-Schuif-en-Schijn.pdf)
 

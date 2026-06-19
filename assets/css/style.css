@@ -116,10 +116,15 @@ body {
 
 .project-card img {
     width: 100%;
-    height: 350px;
+    height: 220px;
     object-fit: cover;
     display: block;
     border-radius: 8px 8px 0 0;
+}
+
+.project-card--contain img {
+    object-fit: contain;
+    background: #f0f0f0;
 }
 
 .project-card h3 {
@@ -211,8 +216,8 @@ body {
 
 /* Allow selected gameplay GIFs to render larger than the default 500px cap */
 .project-content img.project-demo-gif-wide {
-    width: min(880px, 95vw) !important;
-    max-width: min(880px, 95vw) !important;
+    width: min(520px, 90vw) !important;
+    max-width: min(520px, 90vw) !important;
     height: auto !important;
 }
 
