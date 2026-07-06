@@ -1,67 +1,68 @@
 ---
 layout: project
-title: NEMO schuif & schijn
+title: NEMO Slide & Shine
 category: Unity, C#
 image: /assets/images/schuif-en-schijn.png
 image_contain: true
 order: 0
 ---
-[**Speel Schuif en Schijn op itch.io!**](https://swzwij.itch.io/schuif-en-schijn)
+[**Play Slide & Shine on itch.io!**](https://swzwij.itch.io/schuif-en-schijn)
 
-[📄 Lees het volledige procesverslag (PDF)](/assets/Proces-Schuif-en-Schijn.pdf)
+[📄 Read the full process report (PDF)](/assets/Proces-Schuif-en-Schijn.pdf)
+
 
 
 <img src="/assets/images/NEMO%20Gameplay.gif" alt="NEMO gameplay demo" class="project-demo-gif project-demo-gif-wide">
 
-<img src="/assets/images/schuif-en-schijn-gameplay.png" alt="Schuif en Schijn gameplay demo" class="project-demo-gif project-demo-gif-wide">
+<img src="/assets/images/schuif-en-schijn-gameplay.png" alt="Slide & Shine gameplay demo" class="project-demo-gif project-demo-gif-wide">
 
 ## Overview
 
-Schuif en Schijn is een 2D puzzelgame ontwikkeld in Unity voor het NEMO Science Museum. In deze game leren spelers spelenderwijs over de principes van lichtreflectie en subtractieve kleurmenging. Door spiegels te roteren en filters op de juiste posities te schuiven, sturen spelers de laserstralen naar de einddoelen om ze te activeren met de gevraagde kleur.
+Slide & Shine is a 2D puzzle game developed in Unity for the NEMO Science Museum. In this game, players learn through play about the principles of light reflection and subtractive colour mixing. By rotating mirrors and sliding filters into the right positions, players guide laser beams towards end targets and activate them with the required colour.
 
-Het project is gemaakt door vier game development studenten van de Hogeschool van Amsterdam als onderdeel van een opdracht voor een tentoonstelling over game development in het NEMO Science Museum. Het team heeft het volledige ontwikkelproces doorlopen en geeft bezoekers zo een interactieve blik achter de schermen van gamedesign en software engineering.
+The project was created by four game development students from the Amsterdam University of Applied Sciences as part of an assignment for an exhibition about game development at the NEMO Science Museum. The team went through the full development process, giving visitors an interactive look behind the scenes of game design and software engineering.
 
 ## Core Features
 
-- **Dynamisch Lasersysteem**: Laserstralen die in real-time reflecteren op spiegels en door objecten worden geblokkeerd.
-- **CMY Kleurfilters**: Kleurfilters die subtractieve kleurmenging (Cyan, Magenta, Yellow) toepassen op passerend laserlicht. Wit licht bevat alle kleuren — een filter absorbeert een deel van het spectrum en laat de rest door. Een magentafilter haalt groen weg, een geelfilter haalt blauw weg; zet je die twee achter elkaar, dan blijft rood over. 
+- **Dynamic Laser System**: Laser beams that reflect off mirrors in real time and are blocked by objects.
+- **CMY Colour Filters**: Colour filters that apply subtractive colour mixing (Cyan, Magenta, Yellow) to passing laser light. White light contains all colours — a filter absorbs part of the spectrum and lets the rest through. A magenta filter removes green, a yellow filter removes blue; stack those two together and you're left with red.
 
-Al zouden we primaire RGB-filters gebruiken, dan verdwijnt deze puzzelmogelijkheid: een RGB-filter laat slechts één kleur door en blokkeert de andere twee direct. Het stapelen van twee verschillende RGB-filters blokkeert daardoor gelijk het volledige spectrum. Het CMY-model biedt precies de structuur die nodig is — elke combinatie van twee filters levert nog een bruikbare kleur op, waardoor zinvolle puzzels mogelijk zijn.Dit staat tegenover additieve kleurmenging (RGB), waarbij kleuren juist worden opgeteld: rood + groen = geel, alle drie samen = wit.
-- **Oplaadbare Targets**: Einddoelen die alleen opladen wanneer ze door de juiste kleur laserlicht worden geraakt, en langzaam ontladen bij gebrek aan licht.
-- **Level Management**: Een gecentraliseerd systeem dat de voortgang van de speler beheert en dynamisch nieuwe levels inlaadt. Spelers moeten in totaal 2 levels van een moeilijkheidsniveau halen voordat de moeilijkheidsgraad omhoog gaat.
+  If we had used primary RGB filters instead, this puzzle mechanic would disappear: an RGB filter only lets one colour through and immediately blocks the other two. Stacking two different RGB filters would therefore block the entire spectrum at once. The CMY model provides exactly the structure needed — every combination of two filters still yields a usable colour, making meaningful puzzles possible. This contrasts with additive colour mixing (RGB), where colours are added together: red + green = yellow, all three together = white.
+- **Chargeable Targets**: End targets that only charge when hit by the correct colour of laser light, and slowly discharge when no light is present.
+- **Level Management**: A centralised system that manages player progress and dynamically loads new levels. Players must complete 2 levels at a given difficulty before the difficulty increases.
 
-**Mijn bijdragen waren gericht op:**
-- Ontwerp en implementatie van het oplaadsysteem voor de **einddoelen** (`LevelTarget.cs` en `LevelTargetColor.cs`).
-- Realisatie van de **subtractieve kleurfilters** (`LaserColorFilter.cs`) om laserstralen van kleur te veranderen op basis van RGB/CMY-logica.
-- Mede-ontwikkeling van de **Level Manager** (`LevelManager.cs`) voor het registreren van doelen en het controleren van de win-condities.
-- Analyse maken hoe kinderen leren en hoe dit het beste kan worden toegepast in game design. Door levels en progressie te bestuderen zorgt het ervoor dat de opbouw geschikt is voor een brede doelgroep met verschillende niveaus van begrip. Dat zorgt ervoor dat iedereen op hun eigen manier iets van het spel leert.
+**My contributions focused on:**
+- Designing and implementing the charging system for the **end targets** (`LevelTarget.cs` and `LevelTargetColor.cs`).
+- Implementing the **subtractive colour filters** (`LaserColorFilter.cs`) to change laser beam colours based on RGB/CMY logic.
+- Co-developing the **Level Manager** (`LevelManager.cs`) for registering targets and checking win conditions.
+- Analysing how children learn and how this can best be applied in game design. By studying levels and progression, the structure was made suitable for a broad audience with varying levels of understanding, ensuring everyone can learn something from the game in their own way.
 
 ---
 
-## Level Progressie
+## Level Progression
 
-De levelopbouw volgt de structuur van **Kishōtenketsu** : een Oost-Aziatisch vertelvorm met vier fases die ook in level design wordt toegepast. Introductie (*Ki*) spiegels worden geïntroduceerd zonder afleiding. Ontwikkeling (*Shō*) filters worden apart uitgediept. Wending (*Ten*) de twee mechanics worden gecombineerd, wat een nieuw probleem creëert zonder dat er een nieuwe regel nodig is. Oplossing (*Ketsu*) de schuifpuzzels brengen alles samen in toenemende complexiteit.
+The level structure follows **Kishōtenketsu**: an East Asian narrative form with four phases, also applied in level design. Introduction (*Ki*) — mirrors are introduced without distraction. Development (*Shō*) — filters are explored separately. Twist (*Ten*) — the two mechanics are combined, creating a new problem without introducing a new rule. Resolution (*Ketsu*) — the slide puzzles bring everything together in increasing complexity.
 
-| Niveau 
-|--------|---------|
-| 1 | Alleen spiegels |
-| 2 | Alleen filters |
-| 3 | Niet over elkaar heen |
-| 4 | Kruisende lichtstralen |
-| 5 | Filters én spiegels samen |
-| 6–8 | Schuifpuzzels (makkelijk → moeilijk) |
+| Level | Description |
+|-------|-------------|
+| 1 | Mirrors only |
+| 2 | Filters only |
+| 3 | No overlapping beams |
+| 4 | Crossing light beams |
+| 5 | Filters and mirrors together |
+| 6–8 | Slide puzzles (easy → hard) |
 
-De keuze om filters **los** van spiegels te introduceren was een leerresultaat van playtests: spelers die filters en spiegels tegelijk kregen de kleurregels niet begrepen en willekeurig begonnen te gokken. Spelers waren meer bezig met de puzzels en gingen dus gokken welke combinatie een bepaalde lichtstraal zou maken. Door herhaling van de basisprincipes konden spelers leren en konden we later de complexiteit verhogen door beide mechanics tegelijk aan te bieden.
+The decision to introduce filters **separately** from mirrors was a lesson learned from playtests: players who received both at the same time did not understand the colour rules and started guessing randomly. Players were more focused on solving puzzles and resorted to trial and error to figure out which combination would produce a given beam colour. By reinforcing the basic principles through repetition, players could learn them properly before we later raised the complexity by combining both mechanics.
 
 ---
 
 ## Code Showcase
 
-<img src="/assets/images/schuif-en-schijn-demo.gif" alt="Schuif en Schijn kleurfilter demo" class="project-demo-gif">
+<img src="/assets/images/schuif-en-schijn-demo.gif" alt="Slide & Shine colour filter demo" class="project-demo-gif">
 
-### 1. Subtractieve kleurfilters
+### 1. Subtractive Colour Filters
 
-Wanneer een laserstraal door een filter gaat, wordt de RGB-waarde vermenigvuldigd met het subtractieve CMY-masker van het filter. Een cyaanfilter laat groen en blauw door en blokkeert rood (`new Color(0, 1, 1)`). Als alle kleurkanalen naar nul dalen, is de straal volledig geabsorbeerd en stopt de laser.
+When a laser beam passes through a filter, the RGB value is multiplied by the filter's subtractive CMY mask. A cyan filter lets green and blue through while blocking red (`new Color(0, 1, 1)`). If all colour channels drop to zero, the beam is fully absorbed and the laser stops.
 
 ```csharp
 // LaserColorFilter.cs
@@ -87,9 +88,9 @@ public static bool IsAbsorbed(Color color)
     => color.r < 0.01f && color.g < 0.01f && color.b < 0.01f;
 ```
 
-### 2. Oplaadbaar target met kleurcheck
+### 2. Chargeable Target with Colour Check
 
-`ReceiveLight` wordt elke frame aangeroepen door de laser. Als de kleur niet klopt, keert de methode direct terug. Zodra de timer `requiredSeconds` bereikt, meldt het target zichzelf bij de LevelManager. De `Update`-loop laat de timer langzaam leeglopen als er geen licht op valt, en werkt de visuele progress-ring bij.
+`ReceiveLight` is called every frame by the laser. If the colour does not match, the method returns immediately. Once the timer reaches `requiredSeconds`, the target reports itself to the LevelManager. The `Update` loop gradually drains the timer when no light is hitting it, and updates the visual progress ring.
 
 ```csharp
 // LevelTarget.cs
@@ -104,8 +105,8 @@ private void Update()
     if (_isActivated && _timer < requiredSeconds)
         _isActivated = false;
 
-    _progressImage.fillAmount = FillProgress; // visuele feedback
-    _hasLight = false;                        // reset elke frame
+    _progressImage.fillAmount = FillProgress; // visual feedback
+    _hasLight = false;                        // reset every frame
 }
 
 public void ReceiveLight(float deltaTime, Color laserColor)
@@ -117,7 +118,7 @@ public void ReceiveLight(float deltaTime, Color laserColor)
     if (_isActivated) return;
 
     _timer += deltaTime;
-    OnAnyTargetCharging?.Invoke(this); // event voor UI-feedback
+    OnAnyTargetCharging?.Invoke(this); // event for UI feedback
 
     if (_timer >= requiredSeconds)
     {
@@ -128,9 +129,9 @@ public void ReceiveLight(float deltaTime, Color laserColor)
 }
 ```
 
-### 3. Level Manager — targets registreren en win-conditie
+### 3. Level Manager — Registering Targets and Win Condition
 
-Elk target registreert zichzelf bij de LevelManager via `OnEnable` en verwijdert zichzelf via `OnDisable`. Zodra een target oplaat en `OnTargetActivated` aanroept, controleert de LevelManager of **alle** bijgehouden targets actief zijn — pas dan wordt het level als voltooid beschouwd.
+Each target registers itself with the LevelManager via `OnEnable` and removes itself via `OnDisable`. As soon as a target charges up and calls `OnTargetActivated`, the LevelManager checks whether **all** tracked targets are active — only then is the level considered complete.
 
 ```csharp
 // LevelManager.cs
