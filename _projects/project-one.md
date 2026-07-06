@@ -3,7 +3,7 @@ layout: project
 title: HexFront
 category: MonoGame, JavaScript
 image: /assets/images/HexFront.png
-order: 1
+order: 2
 ---
 
 [**Download HexFront on itch.io!**](https://nickdisp.itch.io/hexfront?secret=migH0h72DMa66YptyipiH7geRg)
